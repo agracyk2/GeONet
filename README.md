@@ -8,4 +8,4 @@ We learn the Wasserstein geodesic with a neural operator by learning the optimal
 ![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190309850-a7b9425c-86f9-4952-a7c4-d30f77181318.jpg)
 
 
-\section What does this code do?
+# What does this code do?
