@@ -8,4 +8,6 @@ We learn the Wasserstein geodesic with a neural operator by learning the optimal
 ![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190309850-a7b9425c-86f9-4952-a7c4-d30f77181318.jpg)
 
 
-# What does this code do?
+## What does this code do?
+
+This code performs the above: learning a neural operator for the Wasserstein geodesic. We perform this among two datasets: synthetic data of Gaussian mixtures; and real data of the CIFAR-10 dataset.
