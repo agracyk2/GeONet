@@ -15,3 +15,12 @@ GeONet is mesh-invariant, transmuting low-resolution images into high-resolution
 This code performs the above: learning a neural operator for the Wasserstein geodesic. We perform this among two datasets: synthetic data of Gaussian mixtures; and real data of the CIFAR-10 dataset. We implement all of our code using PyTorch.
 
 In the Gaussian mixture code, you will find: construction of DeepONets; physics-informed loss for DeepONets for continuity and HJ equations; a generation of Gaussian mixture data; our training algorithm to train GeONet.
+
+
+## Dependencies
+
+To compare the data to existing methods, we use POT, the optimal transport library. It may be necessary to run the following, or install by other means:
+
+```
+!pip install pot
+```
