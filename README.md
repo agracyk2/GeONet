@@ -5,6 +5,8 @@ A neural operator is effectively a means of deducing a nonlinear operator betwee
 
 We learn the Wasserstein geodesic with a neural operator by learning the optimality conditions as a system of PDEs: a continuity equation and a Hamilton-Jacobi equation. We implement a physics-informed loss to solve the coupled PDE system. To account for numerous instances of data, we implement physics-informed DeepONets.
 
+GeONet is mesh-invariant, transmuting low-resolution images into high-resolution geodesics. Furthermore, it is instantaneous in the online setting, unlike traditional geodesic algorithms.
+
 ![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190309850-a7b9425c-86f9-4952-a7c4-d30f77181318.jpg)
 
 
