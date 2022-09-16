@@ -9,3 +9,7 @@ We learn the Wasserstein geodesic with a neural operator by learning the optimal
 GeONet is mesh-invariant, transmuting low-resolution images into high-resolution geodesics. Furthermore, it is instantaneous in the online setting, needing no retraining or recomputation for new input unlike existing geodesic algorithms.
 
 ![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190828970-aa3f231f-51b2-4bde-ba0c-c88949e1f54f.jpg)
+
+## What does this code do?
+
+This code performs the above description: learning a neural operator for the Wasserstein geodesic. We perform this among two datasets: synthetic data of Gaussian mixtures; and real data from the CIFAR-10 dataset. We implement all of our code using **PyTorch**.
