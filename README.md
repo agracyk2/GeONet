@@ -18,6 +18,10 @@ This code performs the above description: learning a neural operator for the Was
 
 ## How do I use this code?
 
-This code is primarily intended for use in Jupyter Notebook formats, where .py files can be run within the primary main notebook file. This code is also intended for all files belonging to the same directory. Our code is found in the master branch of this repository.
+This code is primarily intended for use in Jupyter Notebook formats, where .py files can be run within the primary main notebook file. This code is also intended for all files belonging to the same directory. Our code is found in the **master branch** of this repository.
 
-**Gaussian mixtures:**
+**Gaussian mixtures:** The primary file to run is GeONet_main_Gaussian_mixtures, while the other files are supplementary to run in conjunction with this file. Please ensure all files are in the same directory.
+
+To run GeONet from pre-trained networks, one only needs the main file, the GeONet_models file, and the six .pth files containing the neural network parameters. One can read the comments in the main code to determine which code chunks to run to use the pre-trained model.
+
+To train GeONet, one needs the main file, the GeONet_models.py file, Physics_informed_loss.py, Gaussian_mixture_data_creation.py, and Training_algorithm.py. One can modify the experiment parameters, such as means and variances, if one wishes to test GeONet on new sets of training data.
