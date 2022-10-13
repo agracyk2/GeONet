@@ -18,6 +18,6 @@ This code performs the above description: learning a neural operator for the Was
 
 ## How do I use this code?
 
-This code is primarily intended for use in Jupyter Notebook formats, where .py files can be run within the primary main notebook file. This code is also intended for all files belonging to the same directory.
+This code is primarily intended for use in Jupyter Notebook formats, where .py files can be run within the primary main notebook file. This code is also intended for all files belonging to the same directory. Our code is found in the master branch of this repository.
 
-Our code is found in the master branch of this repository.
+**Gaussian mixtures:**
