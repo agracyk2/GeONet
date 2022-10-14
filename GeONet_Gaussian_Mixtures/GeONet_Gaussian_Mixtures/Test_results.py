@@ -43,7 +43,7 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
 
     # Construct means, variance, and covariances
     means = np.random.uniform(low=1.2, high=3.8, size=(k,2))
-    variances = np.random.uniform(low=0.35, high=0.9, size=(k,2))
+    variances = np.random.uniform(low=0.35, high=0.75, size=(k,2))
     covariances = np.random.uniform(low=-0.2, high=0.2, size=(k,2))
 
     # Add variances/covariances to arrays
