@@ -25,3 +25,7 @@ This code is primarily intended for use in Jupyter Notebook formats, where .py f
 To run GeONet from pre-trained networks, one only needs the main file, the `GeONet_models.py` file, and the six `.pth` files containing the neural network parameters. One can read the comments in the main code to determine which code chunks to run to use the pre-trained model.
 
 To train GeONet, one needs the main file, the `GeONet_models.py` file, `Physics_informed_loss.py`, `Gaussian_mixture_data_creation.py`, and `Training_algorithm.py`. One can modify the experiment parameters, such as means and variances, if one wishes to test GeONet on new sets of training data.
+
+## Additional notes
+
+We found gradient-enhancement, a technique discussed in the appendix of our paper, favorable for the Gaussian mixture experiment. Our saved neural network parameters include this.
