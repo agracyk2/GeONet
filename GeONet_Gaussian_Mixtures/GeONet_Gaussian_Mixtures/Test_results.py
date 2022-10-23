@@ -35,8 +35,8 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
     X, Y = np.meshgrid(x, y)
 
     # Define number of mixtures
-    num_u0_mixtures = 5
-    num_u1_mixtures = 2
+    num_u0_mixtures = 8
+    num_u1_mixtures = 4
     k = num_u0_mixtures + num_u1_mixtures
 
     
@@ -55,8 +55,8 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
 
 
     # Generate coefficients of the mixtures
-    c1 = c2 = c3 = c4 = c5 = 0.2
-    c6 = np.random.uniform(0,0.7,1); c7=1-c6
+    c1 = c2 = c3 = c4 = c5 = c6 = c7 = c8 = 1/8
+    c9 = c10 = c11 = c12 = 0.25
 
 
     # Initialize arrays 
@@ -77,10 +77,12 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
         for j in range(N):
             u0_base[i,j] = c1*h(X[i,j], Y[i,j], means[0,:], Sigma[:,:,0])  + c2*h(X[i,j], Y[i,j], means[1,:], Sigma[:,:,1]) + \
                           c3*h(X[i,j], Y[i,j], means[2,:], Sigma[:,:,2])  + c4*h(X[i,j], Y[i,j], means[3,:], Sigma[:,:,3]) + \
-                          c5*h(X[i,j], Y[i,j], means[4,:], Sigma[:,:,4])  
+                          c5*h(X[i,j], Y[i,j], means[4,:], Sigma[:,:,4])  + c6*h(X[i,j], Y[i,j], means[5,:], Sigma[:,:,5]) + \
+                          c7*h(X[i,j], Y[i,j], means[6,:], Sigma[:,:,6])  + c8*h(X[i,j], Y[i,j], means[7,:], Sigma[:,:,7]) 
 
-            u1_base[i,j] = c6*h(X[i,j], Y[i,j], means[5,:], Sigma[:,:,5])  + c7*h(X[i,j], Y[i,j], means[6,:], Sigma[:,:,6])
- 
+            u1_base[i,j] = c9*h(X[i,j], Y[i,j], means[8,:], Sigma[:,:,8])  + c10*h(X[i,j], Y[i,j], means[9,:], Sigma[:,:,9]) + \
+                           c11*h(X[i,j], Y[i,j], means[10,:], Sigma[:,:,10])  + c12*h(X[i,j], Y[i,j], means[11,:], Sigma[:,:,11])
+  
             u0_base_vector[z,0] = u0_base[i,j]
             u1_base_vector[z,0] = u1_base[i,j]
             z = z + 1
@@ -107,10 +109,12 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
         for j in range(N_2):
             u0_highres[i,j] = c1*h(X_new0[i,j], Y_new0[i,j], means[0,:], Sigma[:,:,0])  + c2*h(X_new0[i,j], Y_new0[i,j], means[1,:], Sigma[:,:,1]) + \
                       c3*h(X_new0[i,j], Y_new0[i,j], means[2,:], Sigma[:,:,2])  + c4*h(X_new0[i,j], Y_new0[i,j], means[3,:], Sigma[:,:,3]) + \
-                      c5*h(X_new0[i,j], Y_new0[i,j], means[4,:], Sigma[:,:,4])  
+                      c5*h(X_new0[i,j], Y_new0[i,j], means[4,:], Sigma[:,:,4])  + c6*h(X_new0[i,j], Y_new0[i,j], means[5,:], Sigma[:,:,5]) + \
+                      c7*h(X_new0[i,j], Y_new0[i,j], means[6,:], Sigma[:,:,6]) + c8*h(X_new0[i,j], Y_new0[i,j], means[7,:], Sigma[:,:,7])
  
 
-            u1_highres[i,j] = c6*h(X_new0[i,j], Y_new0[i,j], means[5,:], Sigma[:,:,5])  + c7*h(X_new0[i,j], Y_new0[i,j], means[6,:], Sigma[:,:,6])
+            u1_highres[i,j] = c9*h(X_new0[i,j], Y_new0[i,j], means[8,:], Sigma[:,:,8])  + c10*h(X_new0[i,j], Y_new0[i,j], means[9,:], Sigma[:,:,9]) + \
+          c11*h(X_new0[i,j], Y_new0[i,j], means[10,:], Sigma[:,:,10])  + c12*h(X_new0[i,j], Y_new0[i,j], means[11,:], Sigma[:,:,11])
 
             X_new[z,0] = X_new0[i,j]
             Y_new[z,0] = Y_new0[i,j]
@@ -140,6 +144,7 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
     u_trunk5 = Cty_trunk(X_vector_new, Y_vector_new, t_test[:,2].reshape(-1,1))
     u_trunk75 = Cty_trunk(X_vector_new, Y_vector_new, t_test[:,3].reshape(-1,1))
     u_trunk1 = Cty_trunk(X_vector_new, Y_vector_new, t_test[:,4].reshape(-1,1))
+
 
     # Compute geodesic at certain times
     u_test_vector0 = torch.sum( (u_branch0*u_branch1) * u_trunk0, dim=-1).unsqueeze(1)
@@ -255,5 +260,3 @@ def test_results(Cty_branch0, Cty_branch1, Cty_trunk, HJ_branch0, HJ_branch1, HJ
 
     print("Reference results:")
     plt.show()
-    
-    

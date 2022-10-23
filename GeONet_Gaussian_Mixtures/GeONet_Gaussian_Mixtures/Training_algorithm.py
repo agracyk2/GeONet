@@ -32,15 +32,15 @@ def training_algorithm(iterations, num_batches, batch_size, N, num_training_data
     optimizer_Cty_branch1 = torch.optim.Adam(Cty_branch1.parameters(), lr=0.00005)
     optimizer_Cty_trunk = torch.optim.Adam(Cty_trunk.parameters(), lr=0.00005)
     
-    coefficients[0] = np.std(loss_matrix[:,0])/np.mean(loss_matrix[:,0])
-    coefficients[1] = np.std(loss_matrix[:,1])/np.mean(loss_matrix[:,1])
-    coefficients[2] = np.std(loss_matrix[:,2])/np.mean(loss_matrix[:,2])
-    coefficients[3] = np.std(loss_matrix[:,3])/np.mean(loss_matrix[:,3])
-    coefficients = coefficients/( np.sum(coefficients) ) 
-    
     for epoch in range(iterations):
 
         index_list = range(0, N*N*num_training_data)
+        
+        coefficients[0] = np.std(loss_matrix[:,0])/np.mean(loss_matrix[:,0])
+        coefficients[1] = np.std(loss_matrix[:,1])/np.mean(loss_matrix[:,1])
+        coefficients[2] = np.std(loss_matrix[:,2])/np.mean(loss_matrix[:,2])
+        coefficients[3] = np.std(loss_matrix[:,3])/np.mean(loss_matrix[:,3])
+        coefficients = coefficients/( np.sum(coefficients) ) 
     
         # Randomly sample in bounded domain
         x_tensor = np.random.uniform(0,5,size=(N*N*num_training_data,1))
