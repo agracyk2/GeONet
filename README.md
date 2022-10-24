@@ -29,6 +29,4 @@ To run GeONet from pre-trained networks, one only needs the main file, the `GeON
 
 To train GeONet, one needs the main file, the `GeONet_models.py` file, `Physics_informed_loss.py`, `Gaussian_mixture_data_creation.py`, and `Training_algorithm.py`. One can modify the experiment parameters, such as means and variances, if one wishes to test GeONet on new sets of training data.
 
-## Additional notes
 
-We found gradient-enhancement, a technique discussed in the appendix of our paper, favorable for the Gaussian mixture experiment. Our saved neural network parameters include this.
