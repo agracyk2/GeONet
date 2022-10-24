@@ -10,7 +10,8 @@ GeONet is mesh-invariant, transmuting low-resolution images into high-resolution
 
 ![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190829832-933d8a2e-f247-497b-bb7a-0f8e44b3b814.jpg)
 
-![Gaussians 10.pdf](https://github.com/agracyk2/GeONet/files/9848709/Gaussians.10.pdf)
+![Gaussians 10](https://user-images.githubusercontent.com/98125988/197447813-0f46646a-583d-4182-a451-b0e2b3a43273.jpg)
+
 
 ## What does this code do?
 
