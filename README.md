@@ -16,7 +16,7 @@ GeONet is mesh-invariant, transmuting low-resolution images into high-resolution
 
 This code performs the above description: learning a neural operator for the Wasserstein geodesic. We perform this among two datasets: synthetic data of Gaussian mixtures; and real data from the CIFAR-10 dataset. We implement all of our code using **PyTorch**.
 
-![Gaussians 10](https://user-images.githubusercontent.com/98125988/197447813-0f46646a-583d-4182-a451-b0e2b3a43273.jpg)
+![Gaussians 11](https://user-images.githubusercontent.com/98125988/197448547-2bd62511-fbf4-4b09-8515-305321c19368.jpg)
 
 
 ## How do I use this code?
