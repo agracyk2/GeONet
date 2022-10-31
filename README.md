@@ -8,12 +8,15 @@ We learn the Wasserstein geodesic with a neural operator by learning the optimal
 
 GeONet is mesh-invariant, transmuting low-resolution images into high-resolution geodesics. Furthermore, it is instantaneous in the online setting, needing no retraining or recomputation for new input unlike existing geodesic algorithms.
 
-![Geodesics Diagram JPG](https://user-images.githubusercontent.com/98125988/190829832-933d8a2e-f247-497b-bb7a-0f8e44b3b814.jpg)
+![Geodesics Diagram 1](https://user-images.githubusercontent.com/98125988/197448358-92ca9211-c7cb-4339-8017-81d42c9e13dd.jpg)
+
 
 
 ## What does this code do?
 
 This code performs the above description: learning a neural operator for the Wasserstein geodesic. We perform this among two datasets: synthetic data of Gaussian mixtures; and real data from the CIFAR-10 dataset. We implement all of our code using **PyTorch**.
+
+![Gaussians 11](https://user-images.githubusercontent.com/98125988/197448547-2bd62511-fbf4-4b09-8515-305321c19368.jpg)
 
 
 ## How do I use this code?
@@ -26,6 +29,4 @@ To run GeONet from pre-trained networks, one only needs the main file, the `GeON
 
 To train GeONet, one needs the main file, the `GeONet_models.py` file, `Physics_informed_loss.py`, `Gaussian_mixture_data_creation.py`, and `Training_algorithm.py`. One can modify the experiment parameters, such as means and variances, if one wishes to test GeONet on new sets of training data.
 
-## Additional notes
 
-We found gradient-enhancement, a technique discussed in the appendix of our paper, favorable for the Gaussian mixture experiment. Our saved neural network parameters include this.
