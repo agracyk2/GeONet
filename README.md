@@ -8,3 +8,17 @@ We present GeONet, a neural operator for the Wasserstein geodesic. It is known t
 In the offline stage, GeONet trains using such a physics-informed approach. GeONet is instantaneous in the online setting, and can be deployed for real-time predictions of Wasserstein geodesics with a significant reduction in computation cost with considerable accuracy. GeONet is trained using a uniform collocation procedure, which allows output mesh-invariance, meaning GeONet is suitable for zero-shot super resolution, and low-resolution geodesics can be adapted to high-resolution with no extra computational cost; traditional OT solvers cannot do this.
 
 
+If you find this repository useful in your research, please cite it as:
+
+```bibtek
+@misc{gracyk2024geonetneuraloperatorlearning,
+      title={GeONet: a neural operator for learning the Wasserstein geodesic}, 
+      author={Andrew Gracyk and Xiaohui Chen},
+      year={2024},
+      eprint={2209.14440},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2209.14440}, 
+}
+```
+
